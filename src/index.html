@@ -6,8 +6,109 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="main.js"></script>
 </head>
 <body>
   <app-root></app-root>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#about" class="split">Men</a>
+    <a href="#about" class="split">Women</a>
+    <a href="#about" class="split">Kids</a>
+    <a href="#about" class="split">Customize</a>
+    <a href="#about" class="split">Sale</a>
+    
+  </div>
+  <nav>
+    <div class="logo-img">
+      <img src="\assets\logo2.png"/>
+    </div>
+  </nav>
+<div class="header">
+  <div class="content">
+    <h1 class="heading">The Clearance Sale</h1>
+    <h4 class="description">Founded in 1964 as Blue Ribbon Sports, the company became Nike in 1971 after the Greek goddess of victory. One of the most valuable brands among sport businesses, Nike employs over 76,000 people worldwide. It sells its apparel through the Nike brand, as well as its Jordan Brand and Converse subsidiaries.</h4>
+    <a href="#" class="button" button onclick="myFunction()">Know More</a>
+    
+  </div>
+  <img src="\assets\nike1\1.png"class="product-img"/>
+</div>
+<div class="variants">
+  <div class="variant active one">
+    <img src="\assets\nike1\1.png"/>
+  </div>
+  <div class="variant two">
+    <img src="\assets\nike2\1.png"/>
+  </div>
+  <div class="variant three">
+    <img src="\assets\nike3\1.png"/>
+  </div>
+  </div>
+
+<div class="images">
+  <img src="\assets\nike1\1.png"/>
+  <img src="\assets\nike1\2.png"/>
+  <img src="\assets\nike1\3.png"/>
+  <img src="\assets\nike1\4.png"/>
+  <img src="\assets\nike1\5.png"/>
+  <img src="\assets\nike1\6.png"/>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    $(document).ready(function ()
+    {
+      alert("Heyyyy Shoppers!!!!")
+    $(".one").on('click',function()
+    {
+      $("body").css({color:'#000',background:"#fff"});
+      $(".product-img").attr("src","/assets/nike1/1.png");
+      $(".logo-img img").attr("src","/assets/logo2.png");
+      $(".button").css({color:"#fff",background:"#000"});
+      $(".variant").removeClass("active");
+      $(this).addclass("active");
+      $(".images").html("");
+      for(var i=1;i<=6;i++)
+      {
+        $(".images").append(`<img src="/assets/nike1/${i}.png"/>1`);
+      }
+    });
+    $(".two").on("click",function()
+    {
+      $("body").css({color:'#000',background:"coral"});
+      $(".product-img").attr("src","./assets/nike2/1.png");
+      $(".logo-img img").attr("src","./assets/logo2.png");
+      $(".button").css({color:"#fff",background:"#000"});
+      $(".variant").removeClass("active");
+      $(this).addclass("active");
+      $(".images").html("");
+      for(var i=1;i<=6;i++)
+      {
+        $(".images").append(`<img src='./assets/nike2/${i}.png'/>`);
+      }
+    });
+    $(".three").on('click',function()
+    {
+      $("body").css({color:'#fff',background:"pink"});
+      $(".product-img").attr("src","/assets/nike3/1.png");
+      $(".logo-img img").attr("src","/assets/logo2.png");
+      $(".button").css({color:"#fff",background:"#000"});
+      $(".variant").removeClass("active");
+      $(this).addclass("active");
+      $(".images").html("");
+      for(var i=1;i<=6;i++)
+      {
+        $(".images").append(`<img src="/assets/nike3/${i}.png"/>1`);
+      }
+    });
+    });
+    </script>
+  
+  
+ 
 </body>
 </html>
